@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const Movie = ({movie}) => {
+  console.log('Movie')
   const imgStyle = {
     height: '260px',
     objectFit: 'cover'

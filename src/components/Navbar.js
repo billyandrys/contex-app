@@ -1,13 +1,22 @@
 import React from 'react'
 
 export const Navbar = () => {
+  const user = { name: null}
   return (
 
-    <nav className='navbar navbar-dark bg-dark'>
+    <nav className='navbar navbar-dark bg-dark mb-4'>
+      <div className='container'>
       <span className='navbar-brand'>
-        <h2>Hello Luis</h2>
+        <h2>{user.name ? `Welcom ${user.name}` : 'welcom'}</h2>
       </span>
-      <button>Sign out</button>
+      {user.name ?
+        <button className='btn btn-primary'>Sign out</button>
+        :
+        <button className='btn btn-primary'>Sign in</button>  
+      }
+      
+      
+      </div>
     </nav>
   )
 }

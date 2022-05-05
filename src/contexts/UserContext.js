@@ -11,7 +11,15 @@ export const UserProvider = ({children})=>{
         setUser(null)
     }
 
-    const data = {user, login, logout }
+    const toggleFavoriteMovieToUser = (movieId)=>{
+        const isFavorite = user?.favoriteMovie?.includes(movieId)
+        const favoriteMovie = isFavorite ? [user.favoriteMovie.filter(movieID => movieID !== movieId)] : [ ...user.favoriteMovie, movieId]
+
+        setUser({...user,
+            favoriteMovie})
+    }
+
+    const data = {user, login, logout, toggleFavoriteMovieToUser }
     return(
         <Usercontext.Provider value= {data}>
             {children}

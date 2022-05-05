@@ -2,10 +2,10 @@ import React, {useContext} from 'react'
 import Usercontext from '../contexts/UserContext';
 
 export const Navbar = () => {
-  //const user = { name: null}
+  
 
   const {user, login, logout} = useContext(Usercontext)
-    console.log('Navbar')
+    
     return (
 
     <nav className='navbar navbar-dark bg-dark mb-4'>
